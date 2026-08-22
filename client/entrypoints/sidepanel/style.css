@@ -1,0 +1,112 @@
+:root {
+  font-family: system-ui, -apple-system, sans-serif;
+  color-scheme: light dark;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+}
+
+.app {
+  padding: 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  min-width: 260px;
+}
+
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+h1 {
+  font-size: 16px;
+  margin: 0;
+}
+
+.badge {
+  font-size: 11px;
+  padding: 2px 8px;
+  border-radius: 999px;
+  color: #fff;
+}
+.badge.ok {
+  background: #16a34a;
+}
+.badge.ng {
+  background: #9ca3af;
+}
+
+.error {
+  background: #fee2e2;
+  color: #991b1b;
+  padding: 8px;
+  border-radius: 6px;
+  font-size: 12px;
+}
+
+.row {
+  display: flex;
+  gap: 6px;
+}
+
+input {
+  flex: 1;
+  padding: 6px 8px;
+  border: 1px solid #cbd5e1;
+  border-radius: 6px;
+  font-size: 13px;
+}
+
+button {
+  padding: 6px 12px;
+  border: none;
+  border-radius: 6px;
+  background: #2563eb;
+  color: #fff;
+  font-size: 13px;
+  cursor: pointer;
+}
+button:disabled {
+  opacity: 0.5;
+  cursor: default;
+}
+button.reload {
+  background: #64748b;
+  margin-top: 6px;
+}
+
+.messages {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.messages li {
+  display: flex;
+  justify-content: space-between;
+  gap: 8px;
+  padding: 8px;
+  border: 1px solid #e2e8f0;
+  border-radius: 6px;
+  font-size: 13px;
+}
+.messages li.empty {
+  justify-content: center;
+  color: #94a3b8;
+  border-style: dashed;
+}
+.messages .time {
+  color: #94a3b8;
+  font-size: 11px;
+  white-space: nowrap;
+}

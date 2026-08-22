@@ -1,0 +1,10 @@
+# Go build output
+/sidepanel-api
+*.exe
+
+# Nix / direnv
+.direnv
+result
+
+# macOS
+.DS_Store
