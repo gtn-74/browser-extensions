@@ -1,3 +1,3 @@
-module sidepanel-api
+module api
 
 go 1.26.3
