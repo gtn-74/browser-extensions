@@ -22,3 +22,8 @@ node_modules
 
 # Backed-up nested git dirs
 **/.git.bak/
+
+# Editor / local project config
+.vscode/
+.envrc
+Untitled
