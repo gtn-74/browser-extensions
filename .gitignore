@@ -19,6 +19,7 @@ node_modules
 
 # Go build artifacts
 /api/sidepanel-api
+/experiments/victim/victim
 
 # Backed-up nested git dirs
 **/.git.bak/
