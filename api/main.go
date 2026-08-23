@@ -12,7 +12,7 @@ func main() {
 	store := message.NewStore()
 
 	// 2. その store を渡して HTTP ハンドラを組み立て（依存性注入）
-	handler := server.New(store)
+	handler := server.NewRouter(store)
 
 	// 3. サーバー起動
 	addr := ":8080"

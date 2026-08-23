@@ -12,8 +12,11 @@ import (
 
 // New はルーティング済み・ミドルウェア適用済みの http.Handler を組み立てて返す。
 // 依存(store)は外から渡してもらう＝依存性注入。
-func New(store *message.Store) http.Handler {
+func NewRouter(store *message.Store) http.Handler {
 	mux := http.NewServeMux()
+	// note:HandleFunc:シンプル
+	// todo:Handle：状態を持たせたいstructにまとめたい？
+	// note:Handler：調査用普段使わないらしい
 
 	// ヘルスチェック
 	mux.HandleFunc("GET /api/health", func(w http.ResponseWriter, _ *http.Request) {
@@ -41,4 +44,5 @@ func New(store *message.Store) http.Handler {
 	})
 
 	return withLog(withCORS(mux))
+	// return withLog(mux)
 }
